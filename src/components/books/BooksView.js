@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ISBN_REGEX, openNotificationWithIcon } from './helpers'
+import { ISBN_REGEX, openNotificationWithIcon } from './../../utils/helpers'
 import { getBookByISBN } from '../../services/bookService'
 import Book from "./Book";
 import { Input } from "antd";
@@ -17,17 +17,18 @@ const BooksView = () => {
 
     const getBookData = () => {
         if (!isbn) return
+
         setLoading(true);
+
         if (ISBN_REGEX.test(isbn)) {
-            getBookByISBN(isbn).then((response) => {
-                setBook(response.data);
+            getBookByISBN(isbn).then((book) => {
+                setBook(book);
                 setIsbn("");
-            }).catch((response) => {
-                openNotificationWithIcon("error", response.message);
             });
         } else {
             openNotificationWithIcon("error", "Wrong ISBN number provided.");
         }
+
         setLoading(false);
     }
 
