@@ -1,7 +1,7 @@
 import { Button } from "antd";
 import React, { useState } from "react";
 import ListItems from "./ListItems";
-
+import "./ListInfo.css"
 
 const ListInfo = ({ items, displayAttribute = 'name', isLink, itemsShowNum = 5, title }) => {
     const [showMore, setShowMore] = useState(false);
@@ -26,9 +26,9 @@ const ListInfo = ({ items, displayAttribute = 'name', isLink, itemsShowNum = 5, 
                                 </div >
                             }
                             {showMore ?
-                                <Button type="link" size="small" onClick={() => setShowMore(false)} className="px-0" >Show Less</Button>
+                                <Button type="link" size="small" onClick={() => setShowMore(false)} className="px-0 btn-padding" >Show Less</Button>
                                 :
-                                <Button type="link" size="small" onClick={() => setShowMore(true)} className="px-0">Show More</Button>
+                                <Button type="link" size="small" onClick={() => setShowMore(true)} className="px-0 btn-padding">Show More</Button>
                             }
                         </div >
                     }

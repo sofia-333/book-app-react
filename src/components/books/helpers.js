@@ -8,5 +8,6 @@ export const openNotificationWithIcon = (type, description) => {
     notification[type]({
         message: 'Error',
         description: description,
+        placement: 'bottomRight'
     });
 };

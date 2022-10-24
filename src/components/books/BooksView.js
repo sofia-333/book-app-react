@@ -55,7 +55,9 @@ const BooksView = () => {
                         <div className="p-2 pl-5">
                             <p className="text-orange-900 text-xl mt-4">Search for your book easily using ISBN 10 or 13!</p>
                         </div>
-                        <img alt="Books" src={BooksImage} className="w-[600px] mx-auto" />
+                        <div className="rounded-2xl border-grey-700 border mx-auto">
+                            <img alt="Books" src={BooksImage} className="w-[550px] rounded-3xl" />
+                        </div>
                     </div>
                     :
                     <div>
