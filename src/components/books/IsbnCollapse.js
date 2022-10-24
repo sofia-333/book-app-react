@@ -2,10 +2,10 @@ import React from "react";
 import { Collapse } from "antd";
 
 
-const {Panel} = Collapse;
+const { Panel } = Collapse;
 
 const text = (
-    <div className="pl-1">
+    <div className="pl-1 text-orange-900">
         <p>
             An ISBN is an International Standard Book Number. ISBNs were 10 digits in length up to the end of December
             2006,
@@ -40,8 +40,8 @@ const text = (
 const IsbnCollapse = () => {
     return (
 
-        <Collapse bordered={false} defaultActiveKey={[]} collapsed>
-            <Panel header="What is ISBN" key="1">
+        <Collapse bordered={false}>
+            <Panel header="What is ISBN">
                 {text}
             </Panel>
         </Collapse>
